@@ -1,7 +1,7 @@
 <template>
-  <div class="header">
+  <div class="m-header">
     <el-row>
-      <el-col :span="20" :offset="2">
+      <el-col>
         <top-bar/>
       </el-col>
     </el-row>
