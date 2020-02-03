@@ -47,7 +47,6 @@ router.post('/verifyCode', async (ctx, next) => {
     }
   })
   const save1Expire = await  Store.hget(`nodemail:${ko.user}`,'expire')
-  console.log(save1Expire)
   ctx.body = {
     code:0,
     msg:'验证码已发送，可能会有延时，有效期1分钟',
