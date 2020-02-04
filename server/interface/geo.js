@@ -44,8 +44,8 @@ router.get('/province/:id', async (ctx) => {
     }
   }
 })
-//获取全部城市列表
-router.get('//province/:id', async (ctx) => {
+//获取当前省份全部城市列表
+router.get('/city', async (ctx) => {
   const { status, data:{ city }} = await axios.get('http://cp-tools.cn/geo/city')
   if (status === 200) {
     ctx.body = {
