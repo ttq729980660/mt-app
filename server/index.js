@@ -12,6 +12,7 @@ import passport from './utils/passport'
 import users from './interface/users'
 import geo from './interface/geo'
 import search from './interface/search'
+import category from './interface/category'
 const app = new Koa()
 
 // Import and Set Nuxt.js options
@@ -53,6 +54,7 @@ async function start () {
   app.use(users.routes()).use(users.allowedMethods())
   app.use(geo.routes()).use(geo.allowedMethods())
   app.use(search.routes()).use(search.allowedMethods())
+  app.use(category.routes()).use(category.allowedMethods())
   app.use((ctx) => {
     ctx.status = 200
     ctx.respond = false // Bypass Koa's built-in response handling
